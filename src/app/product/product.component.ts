@@ -21,7 +21,7 @@ export class ProductComponent implements OnInit {
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-       width: "30%"
+       width: "60%"
     });
   }
 

@@ -27,6 +27,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductComponent } from './product/product.component';
 import { MycartComponent } from './mycart/mycart.component';
 import { DialogComponent } from './dialog/dialog.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { DialogComponent } from './dialog/dialog.component';
     DashboardComponent,
     ProductComponent,
     MycartComponent,
+    DialogComponent,
 
   ],
   imports: [
