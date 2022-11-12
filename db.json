@@ -39,6 +39,54 @@
       "price": 600,
       "date": "2022-11-23T18:00:00.000Z",
       "id": 6
+    },
+    {
+      "productName": "Mobile",
+      "category": "Electronic",
+      "freshness": "Brand New",
+      "price": 20000,
+      "date": "2022-11-18T18:00:00.000Z",
+      "id": 7
+    },
+    {
+      "productName": "Laptop",
+      "category": "Electronic",
+      "freshness": "Brand New",
+      "price": 50000,
+      "date": "2022-11-12T18:00:00.000Z",
+      "id": 8
+    },
+    {
+      "productName": "Desktop",
+      "category": "Electronic",
+      "freshness": "Second Hand",
+      "price": 30000,
+      "date": "2022-11-10T18:00:00.000Z",
+      "id": 9
+    },
+    {
+      "productName": "Jackfruit",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 450,
+      "date": "2022-11-12T18:00:00.000Z",
+      "id": 10
+    },
+    {
+      "productName": "Cucumber",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 220,
+      "date": "2022-11-07T18:00:00.000Z",
+      "id": 11
+    },
+    {
+      "productName": "Vringal",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 120,
+      "date": "2022-11-06T18:00:00.000Z",
+      "id": 12
     }
   ],
   "comments": [
