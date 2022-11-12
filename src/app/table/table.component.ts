@@ -1,13 +1,15 @@
 
 
-
-
-
-
 import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { DialogComponent } from '../dialog/dialog.component';
+import { ApiService } from '../services/api.service';
+
+
+
 
 export interface UserData {
   id: string;
@@ -68,23 +70,98 @@ export class TableComponent implements OnInit {
   //@ViewChild(MatPaginator) paginator: MatPaginator;
   //@ViewChild(MatSort) sort: MatSort;
   @Input()dataSource1: any[];
+  // dialog: any;
 
+
+
+  constructor(private dialog: MatDialog, private api:ApiService) {}
+
+   
+  /*
 
   constructor() {
     // Create 100 users
     
   }
+
+
+  */
+ 
    ngOnInit(): void {
      //throw new Error('Method not implemented.');
    }
 
-   editProductHandler(cardData: any): void{
+   
+   
+   
+   editProduct(row : any){
+
+
+    this.dialog.open(DialogComponent,{
+    width: '60%',
+    data:row
+
+    }).afterClosed().subscribe(value=>{
+      if(value=='update')
+      {
+        
+        this.api.getProduct()
+      .subscribe({
+        next:(res)=>{
+          console.log(res);
           
+          this.dataSource1 = res;
+          //this.dataSource.paginator = this.paginator;
+          //this.dataSource.sort = this.sort
+          
+        },
+        error:(err)=>{
+        alert("Erro while fetching the Records!!")
+      }
+      })
 
-   }
 
-   deleteProductHandler(_id: string): void{
+      }
+    })
+
+    
+  }
+
+  
+
+   
+
+
+
+   deleteProduct(id: number){
        
+    this.api.deleteProduct(id)
+    .subscribe({
+      next:(res)=>{
+        alert("Product Deleted Successfully");
+        
+        
+        this.api.getProduct()
+      .subscribe({
+        next:(res)=>{
+          console.log(res);
+          
+          this.dataSource1 = res;
+          //this.dataSource.paginator = this.paginator;
+          //this.dataSource.sort = this.sort
+          
+        },
+        error:(err)=>{
+        alert("Erro while fetching the Records!!")
+      }
+      })
+
+
+      },
+      error:()=>{
+        alert("Error while deleting the record!");
+      }
+    })
 
   }
 

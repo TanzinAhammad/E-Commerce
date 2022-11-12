@@ -24,19 +24,19 @@
       <!-- Fruit Column -->
       <ng-container matColumnDef="price">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
-        <td mat-cell *matCellDef="let row"> {{row.price}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.price | currency}} </td>
       </ng-container>
 
       <!-- Fruit Column -->
       <ng-container matColumnDef="date">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
-        <td mat-cell *matCellDef="let row"> {{row.date}} </td>
+        <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
       </ng-container>
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
         <td mat-cell *matCellDef="let row">
-          <button mat-icon-button color="primary" (click)="editProductHandler(row)">
+          <button mat-icon-button  color="primary" (click)="editProduct(row)">
             <mat-icon>edit</mat-icon>
           </button>
 
@@ -44,7 +44,7 @@
            
             mat-icon-button
             color="warn"
-            (click)="deleteProductHandler(row._id)"
+            (click)="deleteProduct(row.id)"
           >
             <mat-icon>delete</mat-icon>
           </button>

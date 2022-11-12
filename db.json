@@ -1,19 +1,11 @@
 {
   "productList": [
     {
-      "productName": "Apple",
-      "category": "Fruits",
-      "freshness": "Brand New",
-      "price": 30,
-      "date": "2022-11-09T18:00:00.000Z",
-      "id": 1
-    },
-    {
       "productName": "Mango",
       "category": "Fruits",
       "freshness": "Second Hand",
-      "price": 300,
-      "date": "2022-11-09T18:00:00.000Z",
+      "price": 400,
+      "date": "2022-11-11T18:00:00.000Z",
       "id": 2
     },
     {
@@ -31,6 +23,22 @@
       "price": 100,
       "date": "2022-11-13T18:00:00.000Z",
       "id": 4
+    },
+    {
+      "productName": "Watch",
+      "category": "Electronic",
+      "freshness": "Brand New",
+      "price": 20000,
+      "date": "2022-11-10T18:00:00.000Z",
+      "id": 5
+    },
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 600,
+      "date": "2022-11-23T18:00:00.000Z",
+      "id": 6
     }
   ],
   "comments": [

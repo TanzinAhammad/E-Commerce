@@ -32,13 +32,23 @@ export class ProductComponent implements OnInit {
   }
 
   openDialog() {
+
+    
     this.dialog.open(DialogComponent, {
        width: "100%"
     }).afterClosed().subscribe((value)=>{
 
-      this.ngOnInit();
+     if(value === "save")
+     {
+        this.getAllProducts();
+     }
+
+      //this.ngOnInit();
 
     });
+
+
+    
   }
 
 
@@ -61,6 +71,12 @@ export class ProductComponent implements OnInit {
       }
       })
   }
+
+
+
+  
+   
+  
 
   
   
