@@ -176,8 +176,8 @@
       "freshness": "Second Hand",
       "price": 100,
       "date": "2022-11-23T18:00:00.000Z",
-      "quant": 20,
-      "ident": "",
+      "quant": 19,
+      "ident": 1,
       "id": 22
     },
     {
