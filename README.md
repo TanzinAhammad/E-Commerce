@@ -1,3 +1,10 @@
+Link of the Project Website:
+
+https://symphonious-khapse-d2bbd0.netlify.app
+
+[CUET Industrial Attachment - Final Project.pdf](https://github.com/TanzinAhammad/E-Commerce/files/9996071/CUET.Industrial.Attachment.-.Final.Project.pdf)
+[e-commerce-restapi.zip](https://github.com/TanzinAhammad/E-Commerce/files/9996072/e-commerce-restapi.zip)
+
 # ECOM
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.9.
