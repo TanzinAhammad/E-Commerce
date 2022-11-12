@@ -57,7 +57,7 @@
            
             mat-icon-button
             color="warn"
-            (click)="deleteProduct(row.id)"
+            (click)="deleteProduct(row._id)"
             [disabled]="row.ident!==0"
           >
             <mat-icon>delete</mat-icon>

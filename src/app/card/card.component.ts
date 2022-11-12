@@ -58,7 +58,7 @@ export class CardComponent implements OnInit {
       
       this.product.ident=this.cnt;
       this.product.quant-=this.cnt;
-      this.api.putProduct(this.product,this.product.id)
+      this.api.putProduct(this.product,this.product._id)
       .subscribe({
         next:(res)=>{
           alert("Successfully added to Chart");
