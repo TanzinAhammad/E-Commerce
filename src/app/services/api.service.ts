@@ -19,12 +19,12 @@ export class ApiService {
 
   putProduct(data:any,id : number)
   {
-    return this.http.put<any>("https://ecommerceta.herokuapp.com/edit-product/:id/"+id,data);
+    return this.http.put<any>("https://ecommerceta.herokuapp.com/edit-product/"+id,data);
   }
 
   deleteProduct(id : number)
   {
-    return this.http.delete<any>("https://ecommerceta.herokuapp.com/delete-product/:id/"+id);
+    return this.http.delete<any>("https://ecommerceta.herokuapp.com/delete-product/"+id);
   }
 
 
