@@ -147,15 +147,13 @@ export class TableComponent implements OnInit {
         next:(res)=>{
           console.log(res);
           
-          //this.dataSource1 = new MatTableDataSource(res);
-         // this.dataSource1.paginator = this.paginator;
-         // this.dataSource1.sort = this.sort
+          this.dataSource1 = res;
+          //this.dataSource.paginator = this.paginator;
+          //this.dataSource.sort = this.sort
           
         },
         error:(err)=>{
         alert("Erro while fetching the Records!!")
-
-
       }
       })
 
