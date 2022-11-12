@@ -1,0 +1,46 @@
+{
+  "productList": [
+    {
+      "productName": "Apple",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 30,
+      "date": "2022-11-09T18:00:00.000Z",
+      "id": 1
+    },
+    {
+      "productName": "Mango",
+      "category": "Fruits",
+      "freshness": "Second Hand",
+      "price": 300,
+      "date": "2022-11-09T18:00:00.000Z",
+      "id": 2
+    },
+    {
+      "productName": "Banana",
+      "category": "Fruits",
+      "freshness": "Brand New",
+      "price": 200,
+      "date": "2022-11-16T18:00:00.000Z",
+      "id": 3
+    },
+    {
+      "productName": "Pen",
+      "category": "Electronic",
+      "freshness": "Brand New",
+      "price": 100,
+      "date": "2022-11-13T18:00:00.000Z",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

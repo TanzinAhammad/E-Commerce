@@ -1,7 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
 import {MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { MatTableDataSource } from '@angular/material/table';
 import { DialogComponent } from '../dialog/dialog.component';
+import { ApiService } from '../services/api.service';
+
+
+import {AfterViewInit, ViewChild} from '@angular/core';
+import {MatPaginator} from '@angular/material/paginator';
+import {MatSort} from '@angular/material/sort';
+import { bindCallback } from 'rxjs';
+import { ProductService } from '../product.service';
 
 
 
@@ -13,16 +22,51 @@ import { DialogComponent } from '../dialog/dialog.component';
 export class ProductComponent implements OnInit {
 
 
+  dataSource=[];
 
+  constructor(private dialog: MatDialog, private api:ApiService) {}
   ngOnInit(): void {
-  }
+    
+    this.getAllProducts();
 
-  constructor(public dialog: MatDialog) {}
+  }
 
   openDialog() {
     this.dialog.open(DialogComponent, {
-       width: "60%"
+       width: "100%"
+    }).afterClosed().subscribe((value)=>{
+
+      this.ngOnInit();
+
     });
   }
 
+
+
+
+  getAllProducts()
+  {
+      this.api.getProduct()
+      .subscribe({
+        next:(res)=>{
+          console.log(res);
+          
+          this.dataSource = res;
+          //this.dataSource.paginator = this.paginator;
+          //this.dataSource.sort = this.sort
+          
+        },
+        error:(err)=>{
+        alert("Erro while fetching the Records!!")
+      }
+      })
+  }
+
+  
+  
+
 }
+
+
+
+ 
