@@ -220,7 +220,7 @@ export class TableComponent implements OnInit {
   ngAfterViewInit() {
 
 
-    console.log(this.dataSource1,"Hello World");
+    //console.log(this.dataSource1,"Hello World");
     //this.dataSource1 = new MatTableDataSource(this.dataSource1);
     //this.dataSource1.paginator = this.paginator;
     //this.dataSource1.sort = this.sort;
