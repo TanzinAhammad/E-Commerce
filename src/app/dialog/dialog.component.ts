@@ -30,6 +30,8 @@ export class DialogComponent implements OnInit {
      freshness: ['',Validators.required],
      price: ['',Validators.required],
      date: ['',Validators.required],
+     quant: ['',Validators.required],
+     ident: ['',Validators.required],
 
      });
 
@@ -42,6 +44,8 @@ export class DialogComponent implements OnInit {
       this.productForm.controls['freshness'].setValue(this.editData.freshness);
       this.productForm.controls['price'].setValue(this.editData.price);
       this.productForm.controls['date'].setValue(this.editData.date);
+      this.productForm.controls['quant'].setValue(this.editData.quant);
+      this.productForm.controls['ident'].setValue(this.editData.ident);
 
     }
 
@@ -53,7 +57,7 @@ export class DialogComponent implements OnInit {
 
       if(this.productForm.valid)
       {
-        this.api.prostProduct(this.productForm.value)
+        this.api.postProduct(this.productForm.value)
         .subscribe({
           next:(res)=>{
             alert("Porduct added successfully!");

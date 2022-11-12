@@ -17,6 +17,14 @@
         </mat-select>
     </mat-form-field>
 
+
+    <mat-form-field appearance="outline">
+        <mat-label>Quantity</mat-label>
+        <input formControlName="quant" matInput type="number" placeholder="Quantity">
+      </mat-form-field>
+
+
+
     <mat-form-field appearance="fill">
         <mat-label>Choose a date</mat-label>
         <input formControlName="date" matInput [matDatepicker]="picker">
@@ -34,6 +42,17 @@
         <mat-label>Product Price</mat-label>
         <input formControlName="price" matInput type="number" placeholder="Price">
       </mat-form-field>
+
+
+      
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Code (Enter 0 only)</mat-label>
+        <input formControlName="ident" matInput type="number" placeholder="Enter 0 only">
+      </mat-form-field>
+
+    
+
 </form>
     
 

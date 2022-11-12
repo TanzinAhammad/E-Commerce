@@ -61,7 +61,7 @@ const NAMES: string[] = [
 })
 export class TableComponent implements OnInit {
   displayedColumns: string[] = ["productName",
-  "category", 
+  "category", "quant",
   "freshness",
   "price",
   "date", "action"];
@@ -117,6 +117,8 @@ export class TableComponent implements OnInit {
         },
         error:(err)=>{
         alert("Erro while fetching the Records!!")
+
+
       }
       })
 
@@ -142,10 +144,34 @@ export class TableComponent implements OnInit {
 
    deleteProduct(id: number){
        
+    
+
     this.api.deleteProduct(id)
     .subscribe({
       next:(res)=>{
         alert("Product Deleted Successfully");
+       
+        
+
+        this.api.getProduct()
+      .subscribe({
+        next:(res)=>{
+          console.log(res);
+          
+          this.dataSource1 = res;
+          //this.dataSource.paginator = this.paginator;
+          //this.dataSource.sort = this.sort
+          
+        },
+        error:(err)=>{
+        alert("Erro while fetching the Records!!")
+      }
+      })
+
+        
+
+
+        
       },
       error:()=>{
         alert("Error while deleting the record!!")

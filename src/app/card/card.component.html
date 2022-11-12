@@ -2,7 +2,9 @@
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{product.productName}}</mat-card-title>
-      <mat-card-subtitle>{{product.price}}</mat-card-subtitle>
+      <mat-card-subtitle><p>Price: {{product.price|currency}} </p></mat-card-subtitle>
+      <mat-card-subtitle><p>Available: {{product.quant}} </p></mat-card-subtitle>
+      <mat-card-subtitle><p>Booked: {{product.ident}} </p></mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image src="iphone.jpg" alt="Photo of Product">
     <mat-card-content>
@@ -17,17 +19,17 @@
 
 
     <mat-card-actions>
-        <button (click)="increment()" mat-raised-button>+</button>
-        <p>
-         {{cnt}}
+        <button mat-icon-button color="warn" (click)="increment()" mat-raised-button>+</button>
+        <p>   
+          {{cnt}}
         </p>
-        <button (click)="decrement()" mat-raised-button>-</button>
+        <button mat-icon-button color="warn"(click)="decrement()" mat-raised-button>-</button>
          
   
       </mat-card-actions>
 
     <mat-card-actions>
-      <button mat-raised-button>Add to Cart</button>
+      <button color="primary"  (click)="addCart()"   mat-raised-button>Add to Cart</button>
 
        
 

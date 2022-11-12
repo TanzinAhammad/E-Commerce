@@ -8,7 +8,7 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
   
-  prostProduct(data : any)
+  postProduct(data : any)
   {
     return this.http.post<any>("http://localhost:3000/productList/",data);
   }

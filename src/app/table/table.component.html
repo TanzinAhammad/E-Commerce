@@ -14,6 +14,11 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Category </th>
         <td mat-cell *matCellDef="let row"> {{row.category}} </td>
       </ng-container>
+
+      <ng-container matColumnDef="quant">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Quantity </th>
+        <td mat-cell *matCellDef="let row"> {{row.quant | number}} </td>
+      </ng-container>
   
       <!-- Name Column -->
       <ng-container matColumnDef="freshness">
@@ -32,6 +37,14 @@
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Date </th>
         <td mat-cell *matCellDef="let row"> {{row.date | date}} </td>
       </ng-container>
+
+      
+      <ng-container matColumnDef="ident">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Ident </th>
+        <td mat-cell *matCellDef="let row"> {{row.ident | number}} </td>
+      </ng-container>
+
+
 
       <ng-container matColumnDef="action">
         <th mat-header-cell *matHeaderCellDef>Actions</th>
