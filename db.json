@@ -6,8 +6,8 @@
       "freshness": "Brand New",
       "price": 130,
       "date": "2022-11-13T18:00:00.000Z",
-      "quant": 5,
-      "ident": 0,
+      "quant": 3,
+      "ident": 2,
       "id": 4
     },
     {
@@ -16,8 +16,8 @@
       "freshness": "Brand New",
       "price": 20000,
       "date": "2022-11-10T18:00:00.000Z",
-      "quant": 10,
-      "ident": 0,
+      "quant": 6,
+      "ident": 1,
       "id": 5
     },
     {
@@ -26,8 +26,8 @@
       "freshness": "Brand New",
       "price": 600,
       "date": "2022-11-23T18:00:00.000Z",
-      "quant": 15,
-      "ident": 0,
+      "quant": 13,
+      "ident": 2,
       "id": 6
     },
     {
@@ -169,6 +169,26 @@
       "quant": 10,
       "ident": 0,
       "id": 21
+    },
+    {
+      "productName": "Bulb",
+      "category": "Electronic",
+      "freshness": "Second Hand",
+      "price": 100,
+      "date": "2022-11-23T18:00:00.000Z",
+      "quant": 20,
+      "ident": "",
+      "id": 22
+    },
+    {
+      "productName": "Fan",
+      "category": "Electronic",
+      "freshness": "Brand New",
+      "price": 3000,
+      "date": "2022-11-24T18:00:00.000Z",
+      "quant": 10,
+      "ident": 0,
+      "id": 23
     }
   ],
   "comments": [

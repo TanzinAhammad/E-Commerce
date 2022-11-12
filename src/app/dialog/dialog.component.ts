@@ -31,7 +31,7 @@ export class DialogComponent implements OnInit {
      price: ['',Validators.required],
      date: ['',Validators.required],
      quant: ['',Validators.required],
-     ident: ['',Validators.required],
+     ident: [0],
 
      });
 
@@ -57,6 +57,7 @@ export class DialogComponent implements OnInit {
 
       if(this.productForm.valid)
       {
+        //this.productForm.value.ident=0;
         this.api.postProduct(this.productForm.value)
         .subscribe({
           next:(res)=>{

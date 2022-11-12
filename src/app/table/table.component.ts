@@ -65,16 +65,51 @@ export class TableComponent implements OnInit {
   "freshness",
   "price",
   "date", "action"];
-  //dataSource: MatTableDataSource<UserData>;
 
-  //@ViewChild(MatPaginator) paginator: MatPaginator;
-  //@ViewChild(MatSort) sort: MatSort;
-  @Input()dataSource1: any[];
+
+  dataSource1: any
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+  @Input("dataSource") 
+  set _dataSource(data: any){
+
+    if(data!==undefined){
+      this.dataSource1=new MatTableDataSource(data);
+      
+      this.dataSource1.paginator = this.paginator;
+      this.dataSource1.sort = this.sort;
+
+    }
+    else
+    {
+       this.dataSource1=[];
+    }
+   console.log(data,"Hello");
+
+  };
+
+
+
+  //dataSource: MatTableDataSource<UserData>;
   // dialog: any;
 
 
 
-  constructor(private dialog: MatDialog, private api:ApiService) {}
+  constructor(private dialog: MatDialog, private api:ApiService) {
+
+   
+  
+    
+    // Create 100 users
+    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
+    
+    // Assign the data to the data source for the table to render
+    //this.dataSource1 = new MatTableDataSource(users);
+    //console.log(this.dataSource1);
+
+  
+
+  }
 
    
   /*
@@ -88,6 +123,8 @@ export class TableComponent implements OnInit {
   */
  
    ngOnInit(): void {
+
+    console.log(this.dataSource1);
      //throw new Error('Method not implemented.');
    }
 
@@ -110,9 +147,9 @@ export class TableComponent implements OnInit {
         next:(res)=>{
           console.log(res);
           
-          this.dataSource1 = res;
-          //this.dataSource.paginator = this.paginator;
-          //this.dataSource.sort = this.sort
+          //this.dataSource1 = new MatTableDataSource(res);
+         // this.dataSource1.paginator = this.paginator;
+         // this.dataSource1.sort = this.sort
           
         },
         error:(err)=>{
@@ -181,8 +218,12 @@ export class TableComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    //this.dataSource.paginator = this.paginator;
-    //this.dataSource.sort = this.sort;
+
+
+    console.log(this.dataSource1,"Hello World");
+    //this.dataSource1 = new MatTableDataSource(this.dataSource1);
+    //this.dataSource1.paginator = this.paginator;
+    //this.dataSource1.sort = this.sort;
   }
 
   /*

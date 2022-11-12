@@ -1,9 +1,15 @@
 <div class="mycart">
 
-    <app-card *ngFor="let product of dataSource" [product]="product">
+   <ng-container *ngFor="let product of dataSource" >
+    <app-card *ngIf="product.ident!==0" [product]="product">
     
+
     
     
     </app-card>
+   </ng-container>
+
+    
     
 </div>
+

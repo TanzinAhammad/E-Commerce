@@ -22,7 +22,7 @@ import { ProductService } from '../product.service';
 export class ProductComponent implements OnInit {
 
 
-  dataSource=[];
+  dataSource:MatTableDataSource<any>;
 
   constructor(private dialog: MatDialog, private api:ApiService) {}
   ngOnInit(): void {

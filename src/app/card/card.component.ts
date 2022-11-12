@@ -19,6 +19,9 @@ export class CardComponent implements OnInit {
   @Input() product: any
 
 
+  constructor(private api:ApiService){}
+
+
   ngOnInit(): void {
     //throw new Error('Method not implemented.');
     
@@ -53,7 +56,20 @@ export class CardComponent implements OnInit {
 
       alert(this.cnt);
       
-      
+      this.product.ident=this.cnt;
+      this.product.quant-=this.cnt;
+      this.api.putProduct(this.product,this.product.id)
+      .subscribe({
+        next:(res)=>{
+          alert("Successfully added to Chart");
+        
+        },
+        error:()=>{
+          alert("Error while updating the record!");
+        }
+      })
+
+
 
 
 
