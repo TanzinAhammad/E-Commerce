@@ -127,7 +127,14 @@ export class TableComponent implements OnInit {
     
   }
 
-  
+   
+
+   editProductHandler(cardData: any): void{
+            
+     
+
+
+   }
 
    
 
@@ -139,27 +146,9 @@ export class TableComponent implements OnInit {
     .subscribe({
       next:(res)=>{
         alert("Product Deleted Successfully");
-        
-        
-        this.api.getProduct()
-      .subscribe({
-        next:(res)=>{
-          console.log(res);
-          
-          this.dataSource1 = res;
-          //this.dataSource.paginator = this.paginator;
-          //this.dataSource.sort = this.sort
-          
-        },
-        error:(err)=>{
-        alert("Erro while fetching the Records!!")
-      }
-      })
-
-
       },
       error:()=>{
-        alert("Error while deleting the record!");
+        alert("Error while deleting the record!!")
       }
     })
 

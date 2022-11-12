@@ -1,22 +1,6 @@
 {
   "productList": [
     {
-      "productName": "Mango",
-      "category": "Fruits",
-      "freshness": "Second Hand",
-      "price": 400,
-      "date": "2022-11-11T18:00:00.000Z",
-      "id": 2
-    },
-    {
-      "productName": "Banana",
-      "category": "Fruits",
-      "freshness": "Brand New",
-      "price": 200,
-      "date": "2022-11-16T18:00:00.000Z",
-      "id": 3
-    },
-    {
       "productName": "Pen",
       "category": "Electronic",
       "freshness": "Brand New",
@@ -75,7 +59,7 @@
     {
       "productName": "Cucumber",
       "category": "Vegetables",
-      "freshness": "Brand New",
+      "freshness": "Second Hand",
       "price": 220,
       "date": "2022-11-07T18:00:00.000Z",
       "id": 11
@@ -87,6 +71,14 @@
       "price": 120,
       "date": "2022-11-06T18:00:00.000Z",
       "id": 12
+    },
+    {
+      "productName": "Baboo",
+      "category": "Vegetables",
+      "freshness": "Brand New",
+      "price": 300,
+      "date": "2022-11-03T18:00:00.000Z",
+      "id": 13
     }
   ],
   "comments": [
