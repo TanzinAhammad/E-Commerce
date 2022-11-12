@@ -4,7 +4,7 @@
   }
   
   .example-header-image {
-    background-image: url('iphone.jpg');
+    background-image: url('https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg?auto=compress&cs=tinysrgb&w=600');
     background-size: cover;
   }
 
