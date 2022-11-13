@@ -1,7 +1,3 @@
-Link of the Project Website:
-
-https://symphonious-khapse-d2bbd0.netlify.app
-
 [CUET Industrial Attachment - Final Project.pdf](https://github.com/TanzinAhammad/E-Commerce/files/9996071/CUET.Industrial.Attachment.-.Final.Project.pdf)
 [e-commerce-restapi.zip](https://github.com/TanzinAhammad/E-Commerce/files/9996072/e-commerce-restapi.zip)
 
